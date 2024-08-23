@@ -12,5 +12,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # Make port 8888 available to the world outside this container
 EXPOSE 8888
+
 # Run the application using gunicorn
 CMD ["gunicorn", "--bind", "0.0.0.0:8888", "app.scanner:app"]
