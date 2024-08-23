@@ -35,5 +35,5 @@ def perform_secret_scanning():
     # Implement Secret Scanning logic here
     return "Secret Scanning results"
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     app.run(port=app.config['SCAN_PORT'])
