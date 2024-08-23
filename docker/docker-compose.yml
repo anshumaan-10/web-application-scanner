@@ -1,11 +1,10 @@
-# docker-compose.yml
 version: '3.8'
 
 services:
-  scanner:
-    build: ./docker
+  app:
+    build: .
     ports:
       - "8888:8888"
-    volumes:
-      - ..:/app
-    command: ["python", "scanner.py"]
+    environment:
+      - SCAN_PORT=8888
+    command: python app/scanner.py
